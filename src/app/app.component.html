@@ -1,0 +1,27 @@
+<table *ngIf="items | async">
+  <tr>
+    <td>Documento</td>
+    <td>Numero</td>
+    <td>Numero Operação Interna</td>
+    <td>Safra</td>
+    <td>Descricao safra</td>
+
+    <td>Id Produto</td>
+    <td>Cod Produto</td>
+    <td>Descrição</td>
+    <td>Classe</td>
+    <td>Categoria</td>
+  </tr>
+  <tr *ngFor="let item of items | async">
+    <td>{{ item.idDocumento }}</td>
+    <td>{{ item.idItemDocumento }}</td>
+    <td>{{ item.idOperacaoInterna }}</td>
+    <td>{{ item?.idSafra }}</td>
+    <td>{{ item.descricaoSafra }}</td>
+    <td>{{ item.idProduto }}</td>
+    <td>{{ item.codigoProduto }}</td>
+    <td>{{ item.descricaoProduto }}</td>
+    <td>{{ item.classeProduto }}</td>
+    <td>{{ item.categoriaProduto }}</td>
+  </tr>
+</table>
